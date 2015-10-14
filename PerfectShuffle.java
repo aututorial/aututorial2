@@ -9,17 +9,22 @@ public class PerfectShuffle {
             if (num == 0) {
                 return;
             }
-            ArrayList<String> input = new ArrayList<>(num);
+            String[] input = new String[num];
             for (int i = 0; i < num; i++) {
-                input.add(in.next());
+                input[i] = in.next();
             }
 
-            for (int i = 0; i < num; i += 2) {
-                System.out.println(input.get(i));
+            String[] strings = new String[num];
+            for (int i = 0; i < num / 2 + num % 2; i++) {
+                string[i * 2] = input[i];
             }
 
-            for (int i = 1; i < num; i += 2) {
-                System.out.println(input.get(i));
+            for (int i = 0; i < num / 2; i ++) {
+                string[i * 2 + 1] = input[i + num / 2 + num % 2];
+            }
+
+            for (String s : strings){
+            	System.out.println(s);
             }
         }
     }
